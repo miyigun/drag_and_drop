@@ -6,5 +6,11 @@ List<WordCardModel> data = [
   WordCardModel(englishWord: "red", translateWord: "kırmızı"),
   WordCardModel(englishWord: "apple", translateWord: "elma"),
   WordCardModel(englishWord: "orange", translateWord: "portakal"),
-  WordCardModel(englishWord: "notebook", translateWord: "defter")
+  WordCardModel(englishWord: "notebook", translateWord: "defter"),
+  WordCardModel(englishWord: "yellow", translateWord: "sarı"),
+  WordCardModel(englishWord: "chair", translateWord: "sandalye"),
+  WordCardModel(englishWord: "table", translateWord: "masa"),
+  WordCardModel(englishWord: "desk", translateWord: "sıra"),
+  WordCardModel(englishWord: "glass", translateWord: "bardak"),
+  WordCardModel(englishWord: "television", translateWord: "televizyon")
 ];
