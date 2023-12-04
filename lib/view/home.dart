@@ -19,54 +19,51 @@ class _HomeState extends State<Home> {
         title: Text(widget.title),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: GridView.builder(
-          itemCount: data.length,
-          padding: const EdgeInsets.all(8),
-          shrinkWrap: true,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            mainAxisSpacing: 16,
-            crossAxisSpacing: 16,
-          ),
-          itemBuilder: (context,index) {
-            return Draggable(
-              feedback: Container(  //Taşınabilir Container
-                color: Colors.orange,
-                width: 80,
-                height: 80,
-              ),
-              childWhenDragging: Container( //Tabandaki Container
-                color: Colors.red,
-                width: 80,
-                height: 80,
-                child: Center(child: Text(
-                  data[index].translateWord,
-                  style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold
-                  ),
-                )),
-              ),
-              child: Container( //İki kontainer bir aradayken
-                  color: Colors.green,
+          padding: const EdgeInsets.all(20.0),
+          child: GridView.builder(
+            itemCount: data.length,
+            padding: const EdgeInsets.all(8),
+            shrinkWrap: true,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              mainAxisSpacing: 16,
+              crossAxisSpacing: 16,
+            ),
+            itemBuilder: (context, index) {
+              return Draggable(
+                feedback: Container(
+                  //Taşınabilir Container
+                  color: Colors.orange,
+                  width: 80,
+                  height: 80,
+                ),
+                childWhenDragging: Container(
+                  //Tabandaki Container
+                  color: Colors.red,
                   width: 80,
                   height: 80,
                   child: Center(
-                    child: Text(
-                      data[index].englishWord,
-                      style: const TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold
+                      child: Text(
+                    data[index].translateWord,
+                    style: const TextStyle(
+                        fontSize: 24, fontWeight: FontWeight.bold),
+                  )),
+                ),
+                child: Container(
+                    //İki Container bir aradayken
+                    color: Colors.green,
+                    width: 80,
+                    height: 80,
+                    child: Center(
+                      child: Text(
+                        data[index].englishWord,
+                        style: const TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
                       ),
-                    ),
-                  )
-              ),
-            );
-
-          },
-        )
-      ),
+                    )),
+              );
+            },
+          )),
     );
   }
 }

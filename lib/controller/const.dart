@@ -1,6 +1,6 @@
 import 'package:drag_and_drop/model/word_card_model.dart';
 
-List<WordCardModel> data=[
+List<WordCardModel> data = [
   WordCardModel(englishWord: "child", translateWord: "çocuk"),
   WordCardModel(englishWord: "green", translateWord: "yeşil"),
   WordCardModel(englishWord: "red", translateWord: "kırmızı"),
